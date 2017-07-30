@@ -10,6 +10,15 @@ constructor(props,context) {
     }
 }
 
+deleteLetter () {
+    console.log(this.state.inputText.substring(0,5))
+  this.setState({
+      inputText: this.state.inputText.substring(0,this.state.inputText.length - 1)
+  })
+
+}
+
+
   render ()  {
    return  (
      <div>
@@ -19,7 +28,7 @@ constructor(props,context) {
       value={this.state.inputText}
       onChange={this.handleChange.bind(this)}
       ></input>
-      <TextDisplay text={this.state.inputText}/>
+      <TextDisplay text={this.state.inputText} deleteLetter={this.deleteLetter.bind(this)} />
       </div>
    )
   }
