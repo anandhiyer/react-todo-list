@@ -1,15 +1,7 @@
 import React, { Component } from 'react'
-
+import ToDoItem from './ToDOItem'
 
 class ToDoList extends Component {
-
-constructor(props,context) {
-    super(props,context)
-    this.state = {
-        inputText: ''
-    }
-}
-
 
 
   render ()  {
@@ -17,7 +9,7 @@ constructor(props,context) {
       <ul>
       {
             this.props.todos.map((todo) => {
-                return <li key={todo.id}>{todo.text}</li>
+                return <ToDoItem key={todo.id} todo={todo} actions={this.props.actions} ></ToDoItem>
             })
       }
       </ul>
