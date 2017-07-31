@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import TextInput from './TextInput'
+import ToDoInput from './ToDoInput'
+import ToDoList from './ToDoList'
+import {connect } from 'react-redux'
 
 class App extends Component {
 
@@ -7,7 +9,8 @@ class App extends Component {
     return (
         <div className="_app">
           <h1>This is the App Component</h1>
-          <TextInput/>
+          <ToDoInput dispatch={this.props.dispatch} />
+          <ToDoList todos={this.props.todos}/>
         </div>
 
       )
@@ -15,4 +18,8 @@ class App extends Component {
 
 }
 
-export default App
+function mapStateToProps(state) {
+    return state;
+}
+
+export default connect(mapStateToProps)(App)
