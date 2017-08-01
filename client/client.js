@@ -10,7 +10,11 @@ let initialState = {
               completed:false,
               text: "Initial todo for demo purposes"
             }
-           ]
+          ],
+      user : {
+            username : 'Anand',
+            id : 5
+      }
 
 }
 
