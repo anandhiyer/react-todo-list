@@ -26,6 +26,7 @@
     "redux-logger": "^3.0.6",
     "webpack": "^1.12.13",
     "webpack-dev-middleware": "^1.11.0",
-    "webpack-hot-middleware": "^2.18.2"
+    "webpack-hot-middleware": "^2.18.2",
+    "redux-thunk": "^1.0.3"
   }
 }
